@@ -29,13 +29,15 @@ test:
 
 production:
   <<: *default
-  primary:
-    adapter: postgresql
-  primary_replica:
-    adapter: postgresql
-    url: <%= ENV["HEROKU_POSTGRESQL_CRIMSON_URL"] %>
-    replica: true
-  audit_replica:
-    adapter: postgresql
-    url: <%= ENV["HEROKU_POSTGRESQL_CRIMSON_URL"] %>
-    replica: true
+  database: db/production.postgresql
+
+#  primary:
+#    adapter: postgresql
+#  primary_replica:
+#    adapter: postgresql
+#    url: <%#= ENV["HEROKU_POSTGRESQL_CRIMSON_URL"] %>
+#    replica: true
+#  audit_replica:
+#    adapter: postgresql
+#    url: <%#= ENV["HEROKU_POSTGRESQL_CRIMSON_URL"] %>
+#    replica: true
