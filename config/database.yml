@@ -27,18 +27,15 @@ test:
 #  database: db/test.sqlite3
   database: db/test.postgresql
 
-
 production:
   <<: *default
-  database: db/production.postgresql
-
   primary:
     adapter: postgresql
   primary_replica:
     migrations_paths: db/animal_migrate
     adapter: postgresql
-  #    url: <%= ENV["HEROKU_POSTGRESQL_OLIVE_URL"] %>
+    url: <%= ENV["HEROKU_POSTGRESQL_SILVER_URL"] %>
   audit_replica:
     adapter: postgresql
-    #    url: <%= ENV["HEROKU_POSTGRESQL_PURPLE_URL"] %>
+    url: <%= ENV["HEROKU_POSTGRESQL_PURPLE_URL"] %>
     replica: true
