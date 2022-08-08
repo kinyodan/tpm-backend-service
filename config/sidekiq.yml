@@ -1,0 +1,10 @@
+:schedule:
+#  Get_books_job:
+#    cron: '0 0 * * * *'   # Runs once per minute
+#    every: 5 minutes
+#    class: GetBooksJob
+
+    Get_characters_job:
+      #    cron: '0 0 * * * *'   # Runs once per minute
+      every: 3 minutes
+      class: GetCharactersJob

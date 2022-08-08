@@ -1,0 +1,14 @@
+current directory: /home/me/dtest/books-api/booksService/vendor/bundle/ruby/3.0.0/gems/json-1.8.6/ext/json
+/usr/bin/ruby -I /usr/share/rubygems -r ./siteconf20220804-121656-2uzl2t.rb extconf.rb
+creating Makefile
+
+current directory: /home/me/dtest/books-api/booksService/vendor/bundle/ruby/3.0.0/gems/json-1.8.6/ext/json
+make DESTDIR\= clean
+rm -f  *.o  *.bak mkmf.log .*.time
+
+current directory: /home/me/dtest/books-api/booksService/vendor/bundle/ruby/3.0.0/gems/json-1.8.6/ext/json
+make DESTDIR\=
+make: Nothing to be done for 'all'.
+
+current directory: /home/me/dtest/books-api/booksService/vendor/bundle/ruby/3.0.0/gems/json-1.8.6/ext/json
+make DESTDIR\= install
