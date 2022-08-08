@@ -29,8 +29,8 @@ test:
 
 production:
   <<: *default
+  adapter: postgresql
   database: db/production.postgresql
-
 #  primary:
 #    adapter: postgresql
 #  primary_replica:
