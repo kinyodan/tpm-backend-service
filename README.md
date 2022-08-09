@@ -5,9 +5,6 @@
  Nodejs Back-end Api https://github.com/kinyodan/books-app-node-api
  
 ##
-book of ice and fire backend api service 
-
-Backend Service Api
 
 Built a Back-end API applicatiion to serve the Nodejs Back-end Api.Some Data retrival and api calls from and the Iceand fire api took to long to query per request.
 
