@@ -1,7 +1,8 @@
 # tpm-backend-service
 
-# books-app-node-api
-Node js Api application to serve  the book app front end UI for the  iceandfire Api 
+# Bacakend rails app for the book of ice api as as service to run background jobs and thread do bulk tasks
+ Nodejs Back-end Api https://github.com/kinyodan/books-app-node-api
+ 
 ##
 book of ice and fire backend api service 
 
@@ -14,18 +15,17 @@ So need to take advantage of threading to increase perfomance and also backgroun
 Built a Rails API as an RPC service to the node to run the lengthy tasks and have data already saved and packaged for the front-end requests.
 
 ## Build Setup
-App built with nodejs 
+App built with Ruby on rails 6
 
 ```bash
+# To build locally clone repo and cd to clone folder--
+ 
 # install dependencies
-$ npm install
+$ Bundle install
 
 # serve with hot reload at localhost:3000
-$ npm run dev
+$ rails s
 
-# build for production and launch server
-$ npm run build
-$ npm run start 
 
 ```
 ##  
