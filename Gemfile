@@ -8,7 +8,6 @@ gem "rails", "~> 7.0.3", ">= 7.0.3.1"
 gem 'pg'
 # Use sqlite3 as the database for Active Record
 gem 'dotenv-rails', groups: [:development, :test],require: 'dotenv/rails-now'
-# gem "sqlite3", "~> 1.4"
 gem 'httparty'
 gem 'sidekiq'
 gem 'redis'
@@ -49,6 +48,7 @@ group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
   gem 'rubocop'
+  gem "sqlite3", "~> 1.4"
 end
 
 group :development do

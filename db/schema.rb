@@ -20,7 +20,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_08_08_050702) do
     t.string "publisher"
     t.string "country"
     t.string "mediaType"
-    t.string "releases"
+    t.datetime "released"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

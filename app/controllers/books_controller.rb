@@ -2,22 +2,15 @@ require 'httparty'
 
 class BooksController < ApplicationController
   before_action :set_book, only: %i[ show update destroy ]
-  before_action :rpc_get_books
-  # include httparty
-  #
 
   def rpc_get_books
     @base_uri = 'https://anapioficeandfire.com/api/'
-    p @base_uri
-    # p self.class.get("/books")
     response = HTTParty.get("#{@base_uri}/books")
-    p response
   end
 
   # GET /books
   def index
-    @books = Book.all
-
+    @books = Book.all.order("released DESC")
     render json: @books
   end
 
@@ -29,7 +22,6 @@ class BooksController < ApplicationController
   # POST /books
   def create
     @book = Book.new(book_params)
-
     if @book.save
       render json: @book, status: :created, location: @book
     else

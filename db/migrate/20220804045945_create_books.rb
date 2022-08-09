@@ -9,7 +9,7 @@ class CreateBooks < ActiveRecord::Migration[7.0]
       t.string :publisher
       t.string :country
       t.string :mediaType
-      t.string :releases
+      t.datetime :released
       t.timestamps
     end
   end

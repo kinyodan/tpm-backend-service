@@ -1,4 +1,3 @@
-
 class CharactersController < ApplicationController
   before_action :set_character, only: %i[show update destroy]
   before_action :set_sort_parameters, only: %i[characters_concurrently]
@@ -8,8 +7,7 @@ class CharactersController < ApplicationController
     book = Book.where(isbn: params['isbn']).first
     sort = params[:sortBy]
     filter = params[:filters]
-
-
+    
     if book && sort && sort[:name].size>0 && sort[:column_name].size>0 &&sort[:order].size>0
       book_characters = Character.where(book_id: book.id).order("#{sort[:column_name]} #{sort[:order]}")
     elsif book && filter.count.positive?

@@ -5,39 +5,46 @@
 #   gem "sqlite3"
 #
 default: &default
-#  adapter: sqlite3
-  adapter: postgresql
+  adapter: sqlite3
+#  adapter: postgresql
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   timeout: 5000
 
 development:
   primary:
     <<: *default
-    database: db/production.postgresql
+    database: db/development.sqlite3
   primary_replica:
+    migrations_paths: db/replica_migrate
     <<: *default
-#    database: db/production_replica.sqlite3
-  database: db/development.postgresql
+    database: db/development.sqlite3
+    replica: true
+#  database: db/development.postgresql
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-#  database: db/test.sqlite3
-  database: db/test.postgresql
+  database: db/test.sqlite3
+#  database: db/test.postgresql
+
+#production:
+#  <<: *default
+#  database: db/production.postgresql
 
 production:
   <<: *default
-  adapter: postgresql
-  database: db/production.postgresql
-#  primary:
-#    adapter: postgresql
-#  primary_replica:
-#    adapter: postgresql
-#    url: <%#= ENV["HEROKU_POSTGRESQL_CRIMSON_URL"] %>
-#    replica: true
-#  audit_replica:
-#    adapter: postgresql
-#    url: <%#= ENV["HEROKU_POSTGRESQL_CRIMSON_URL"] %>
-#    replica: true
+  primary:
+    adapter: postgresql
+    database: db/production.postgresql
+  primary_replica:
+    migrations_paths: db/replica_migrate
+    adapter: postgresql
+    database: db/production.postgresql
+  #    url: <%= ENV["HEROKU_POSTGRESQL_OLIVE_URL"] %>
+  audit_replica:
+    adapter: postgresql
+    database: db/production.postgresql
+    #    url: <%= ENV["HEROKU_POSTGRESQL_PURPLE_URL"] %>
+    replica: true
