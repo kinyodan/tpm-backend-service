@@ -1,4 +1,7 @@
 # tpm-backend-service
+
+# books-app-node-api
+Node js Api application to serve  the book app front end UI for the  iceandfire Api 
 ##
 book of ice and fire backend api service 
 
@@ -9,14 +12,6 @@ Built a Back-end API applicatiion to serve the Nodejs Back-end Api.Some Data ret
 So need to take advantage of threading to increase perfomance and also background Jobs to retrive the data in the and ave to database.
 
 Built a Rails API as an RPC service to the node to run the lengthy tasks and have data already saved and packaged for the front-end requests.
-
-The repository for this service is at.
-
-https://github.com/kinyodan/tpm-backend-service/tree/development
-##
-
-# books-app-node-api
-Node js Api application to serve  the book app front end UI for the  iceandfire Api   
 
 ## Build Setup
 App built with nodejs 
@@ -33,6 +28,7 @@ $ npm run build
 $ npm run start 
 
 ```
+##  
 ## Work flow Diagram
  click here to open the workflow architecture documentation and ERD 
 
