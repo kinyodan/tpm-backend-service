@@ -1,6 +1,7 @@
 # tpm-backend-service
 
-# Bacakend rails app for the book of ice api as as service to run background jobs and thread do bulk tasks
+# Back-end rails Api app 
+ Built for the book of ice api as as service to run background jobs and thread do bulk tasks
  Nodejs Back-end Api https://github.com/kinyodan/books-app-node-api
  
 ##
