@@ -42,7 +42,7 @@ production:
     migrations_paths: db/replica_migrate
     adapter: postgresql
     database: db/production.postgresql
-  #    url: <%= ENV["HEROKU_POSTGRESQL_OLIVE_URL"] %>
+    url: <%= ENV["HEROKU_POSTGRESQL_CRIMSON_URL"] %>
     replica: true
   audit_replica:
     adapter: postgresql
