@@ -43,6 +43,7 @@ production:
     adapter: postgresql
     database: db/production.postgresql
   #    url: <%= ENV["HEROKU_POSTGRESQL_OLIVE_URL"] %>
+    replica: true
   audit_replica:
     adapter: postgresql
     database: db/production.postgresql
