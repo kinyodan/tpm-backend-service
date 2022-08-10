@@ -34,18 +34,20 @@ test:
 #  database: db/production.postgresql
 
 production:
-  <<: *default
   primary:
+    <<: *default
     adapter: postgresql
     database: db/production.postgresql
   primary_replica:
+    <<: *default
     migrations_paths: db/replica_migrate
     adapter: postgresql
     database: db/production.postgresql
     url: <%= ENV["HEROKU_POSTGRESQL_CRIMSON_URL"] %>
     replica: true
   audit_replica:
+    <<: *default
     adapter: postgresql
     database: db/production.postgresql
-    #    url: <%= ENV["HEROKU_POSTGRESQL_PURPLE_URL"] %>
+    url: <%= ENV["HEROKU_POSTGRESQL_CRIMSON_URL"] %>
     replica: true

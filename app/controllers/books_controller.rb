@@ -8,10 +8,16 @@ class BooksController < ApplicationController
     response = HTTParty.get("#{@base_uri}/books")
   end
 
+  def rpc_get_book_comments(isbn)
+    @base_uri = 'http://localhost:6060/'
+    response = HTTParty.get("#{@base_uri}/get-comments?isbn=#{isbn}")
+    return response
+  end
   # GET /books
   def index
     @books = Book.all.order("released DESC")
-    render json: @books
+    @response = { data: @books }
+    render json: @response
   end
 
   # GET /books/1
