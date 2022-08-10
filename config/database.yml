@@ -48,5 +48,4 @@ production:
     <<: *default
     adapter: postgresql
     database: db/production.postgresql
-    url: <%= ENV["HEROKU_POSTGRESQL_CRIMSON_URL"] %>
     replica: true
