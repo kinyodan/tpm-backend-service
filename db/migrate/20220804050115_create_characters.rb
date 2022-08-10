@@ -8,14 +8,14 @@ class CreateCharacters < ActiveRecord::Migration[7.0]
       t.string :culture
       t.string :born
       t.string :died
-      t.string :titles
-      t.string :aliases
+      t.text :titles
+      t.text :aliases
       t.string :father
       t.string :mother
       t.string :spouse
-      t.string :allegiances
-      t.string :books
-      t.string :povBooks
+      t.text :allegiances
+      t.text :books
+      t.text :povBooks
       t.string :tvSeries
       t.string :playedby
       t.timestamps
