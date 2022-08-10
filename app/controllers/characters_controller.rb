@@ -38,7 +38,7 @@ class CharactersController < ApplicationController
   # GET /characters
   def get_all_characters
 
-    @characters_unique = Character.select('id,book_id,url,name,gender,culture,born,died, titles,aliases,father,mother, spouse, allegiances, books,povBooks, tvSeries,played_by, created_at, updated_at').group(:url, :name)
+    @characters_unique = Character.select('id,book_id,url,name,gender,culture,born,died, titles,aliases,father,mother, spouse, allegiances, books, povBooks, tvSeries,played_by, created_at, updated_at').group(:url, :name)
 
     total_age = calculate_age_all(@characters_unique)
     age_years = total_age / 12
