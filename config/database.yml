@@ -40,7 +40,6 @@ production:
     database: db/production.postgresql
   primary_replica:
     <<: *default
-    migrations_paths: db/replica_migrate
     adapter: postgresql
     database: db/production.postgresql
     url: <%= ENV['DATABASE_URL'] %>
