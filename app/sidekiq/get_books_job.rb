@@ -62,7 +62,7 @@ class GetBooksJob
         spouse: data['spouse'],
         allegiances: data['allegiances'],
         books: data['books'],
-        povBooks: data['povBooks'],
+        pov_books: data['povBooks'],
         tvSeries: data['tvSeries'],
         played_by: data['played_by'],
         age: { died: data['died'], born: data['born'] }

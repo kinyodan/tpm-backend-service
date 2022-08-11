@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_08_08_050702) do
+ActiveRecord::Schema[7.0].define(version: 2022_08_11_014836) do
   create_table "books", force: :cascade do |t|
     t.string "url"
     t.string "name"
@@ -48,6 +48,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_08_08_050702) do
     t.string "book_isbn"
     t.string "played_by"
     t.integer "age"
+    t.text "pov_books"
   end
 
 end
