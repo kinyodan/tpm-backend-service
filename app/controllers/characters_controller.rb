@@ -3,19 +3,20 @@ class CharactersController < ApplicationController
   before_action :set_sort_parameters, only: %i[characters_concurrently]
 
   def characters_concurrently
+
     book_characters = []
     book = Book.where(isbn: params['isbn']).first
-    sort = params[:sortBy]
+    sort = JSON.parse(params[:sortBy])
     filter = params[:filters]
 
-    if book && sort && sort[:name].size>0 && sort[:column_name].size>0 && sort[:order].size>0
-      book_characters = Character.where(book_id: book.id).order("#{sort[:column_name]} #{sort[:order]}")
+    if book && sort && sort["name"].size>0 && sort["column_name"].size>0 && sort["order"].size>0
+      book_characters = Character.where(book_id: book.id).order("#{sort["column_name"]} #{sort["order"]}")
 
-    elsif book && sort && sort[:age].size>0 && sort[:column_name].size>0 && sort[:order].size>0
-      book_characters = Character.where(book_id: book.id).order("#{sort[:column_name]} #{sort[:order]}")
+    elsif book && sort && sort["age"].size>0 && sort["column_name"].size>0 && sort["order"].size>0
+      book_characters = Character.where(book_id: book.id).order("#{sort["column_name"]} #{sort["order"]}")
 
-    elsif book && sort && sort[:gender].size>0 && sort[:column_name].size>0 && sort[:order].size>0
-      book_characters = Character.where(book_id: book.id).order("#{sort[:column_name]} #{sort[:order]}")
+    elsif book && sort && sort["gender"].size>0 && sort["column_name"].size>0 && sort["order"].size>0
+      book_characters = Character.where(book_id: book.id).order("#{sort["column_name"]} #{sort["order"]}")
 
     elsif book && filter.count.positive?
       book_characters = Character.where(book_id: book.id)
