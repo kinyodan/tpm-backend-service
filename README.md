@@ -1,24 +1,43 @@
-# README
+# tpm-backend-service
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Back-end rails Api app 
+ Built for the book of ice api as as service to run background jobs and thread do bulk tasks
+ Nodejs Back-end Api https://github.com/kinyodan/books-app-node-api
+ 
+##
 
-Things you may want to cover:
+Built a Back-end API applicatiion to serve the Nodejs Back-end Api.Some Data retrival and api calls from and the Iceand fire api took to long to query per request.
 
-* Ruby version
+So need to take advantage of threading to increase perfomance and also background Jobs to retrive the data in the and ave to database.
 
-* System dependencies
+Built a Rails API as an RPC service to the node to run the lengthy tasks and have data already saved and packaged for the front-end requests.
 
-* Configuration
+## Build Setup
+App built with Ruby on rails 6
 
-* Database creation
+```bash
+# To build locally clone repo and cd to clone folder--
+ 
+# install dependencies
+$ Bundle install
 
-* Database initialization
+# serve with hot reload at localhost:3000
+$ rails s
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
+```
+##  
+## Work flow Diagram
+ click here to open the workflow architecture documentation and ERD 
 
-* Deployment instructions
+## API Documentation 
+ Api documentation is on postman 
+link to postman collection here <a href="https://www.postman.com/lunar-crescent-756083/workspace/my-workspace/request/21024605-98348242-b79d-4993-ba48-f7fe9f2c23b1" >Api documentation </a>
 
-* ...
+## All project repos are below
+ Front End UI 
+ https://github.com/kinyodan/book-of-ice-ui
+## 
+
+Nodejs Back-end Api https://github.com/kinyodan/books-app-node-api
+
